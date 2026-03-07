@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Hafizh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <style>
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 25ch
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+        .typing {
+            animation: typing 3s steps(20) infinite alternate, blink 0.7s infinite;
+        }
+    </style>
+
+    <style>
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-[#C4A484]">
+
+    <!-- Navbar -->
+    <nav class="bg-[#FFFDD0] fixed w-full top-0 left-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <h1 class="text-xl md:text-2xl italic font-semibold">Hafizh</h1>
+
+            <!-- Menu Desktop -->
+            <ul class="hidden md:flex gap-6 text-sm">
+                <li><a href="#home" class="hover:scale-110 hover:text-black transition">Home</a></li>
+                <li><a href="#About" class="hover:scale-110 hover:text-black transition">About</a></li>
+                <li><a href="#Skills" class="hover:scale-110 hover:text-black transition">Skills</a></li>
+                <li><a href="#Project" class="hover:scale-110 hover:text-black transition">Project</a></li>
+                <li><a href="#Contact" class="hover:scale-110 hover:text-black transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="pt-28 max-w-6xl mx-auto">
+
+        <!-- Hero -->
+        <section id="home" class="flex flex-col md:flex-row items-center justify-between px-6 py-12 gap-10">
+            <div class="text-center md:text-left">
+                <!-- <h2
+                    class="text-2xl md:text-4xl font-bold mb-3 typing text-white text-2xl font-mono whitespace-nowrap overflow-hidden w-[18ch]">
+                    HELLO, I'M <span class="text-[#FFCC99]">HAFIZH</span>
+                </h2> -->
+
+                <h3 class="text-4xl font-bold text-white">
+                    <span id="typing"></span>
+                </h3>
+
+
+                <script>
+                    const texts = [
+                        "HALO, SAYA HAFIZH",
+                        "HELLO, I'M HAFIZH",
+                        "こんにちは、私はハフィズです",
+                        "안녕하세요, 저는 하피즈입니다"
+                    ];
+
+                    let textIndex = 0;
+                    let charIndex = 0;
+
+                    function typeText() {
+                        if (charIndex < texts[textIndex].length) {
+                            document.getElementById("typing").innerHTML += texts[textIndex].charAt(charIndex);
+                            charIndex++;
+                            setTimeout(typeText, 100);
+                        } else {
+                            setTimeout(deleteText, 1500);
+                        }
+                    }
+
+                    function deleteText() {
+                        let text = document.getElementById("typing").innerHTML;
+                        if (text.length > 0) {
+                            document.getElementById("typing").innerHTML = text.slice(0, -1);
+                            setTimeout(deleteText, 50);
+                        } else {
+                            textIndex = (textIndex + 1) % texts.length;
+                            charIndex = 0;
+                            setTimeout(typeText, 500);
+                        }
+                    }
+
+                    typeText();
+                </script>
+
+                <p class="text-gray-300 border-b border-gray-400 inline-block pb-1">
+                    UI/UX Designer | Fullstack Web Developer
+                </p>
+            </div>
+
+            <img src="/img/kacaw.jpeg" class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-xl shadow-lg">
+        </section>
+
+        <!-- About -->
+        <section class="px-6 pb-10">
+            <div class="bg-[#FFFDD0] rounded-lg p-6">
+                <h3 class="font-bold mb-4 text-lg">About Me</h3>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                    Saya Hafizh, seorang programmer yang menguasai HTML, CSS, JavaScript.
+                    Saya juga mampu membuat desain UI/UX untuk website maupun aplikasi.
+                    Software yang saya gunakan: Figma, Canva, Capcut, dan Picsart.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="px-6 pb-10">
+            <div class="bg-[#FFFDD0] rounded-lg p-6 text-center">
+                <h3 class="font-bold mb-6 text-lg">Skills</h3>
+
+                <div class="flex justify-center gap-8 text-5xl md:text-7xl">
+                    <i class="fa-brands fa-figma float" style="animation-delay:0s"></i>
+                    <i class="fa-brands fa-html5 float" style="color: rgb(255, 14, 14); animation-delay:0.3s"></i>
+                    <i class="fa-brands fa-css3-alt float"
+                        style="color: rgb(150, 0, 232, 1.00); animation-delay:0.6s"></i>
+                    <i class="fa-brands fa-js float" style="color: rgb(179, 145, 24); animation-delay:0.9s"></i>
+                    <i class="fa-brands fa-react float"
+                        style="color: rgb(116, 192, 252, 1.00); animation-delay:1.2s"></i>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="px-6 pb-10">
+            <div class="bg-[#FFFDD0] rounded-lg p-6">
+                <h3 class="font-bold mb-6 text-lg">My Projects</h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                    <div class="max-w-sm bg-white rounded-2xl overflow-hidden 
+              shadow-md hover:shadow-xl 
+              transition duration-300 
+              hover:-translate-y-2">
+
+                        <div class="overflow-hidden">
+                            <img src="/img/Screenshot 2026-01-22 151637.png"
+                                class="hover:scale-110 transition duration-500">
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold mb-2">Membuat Algoritma</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Algoritma yang di terapkan oleh komputer.
+                            </p>
+
+                            <button class="bg-black text-white px-4 py-2 rounded-lg 
+                     hover:bg-gray-800 transition">
+                                View Project
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="max-w-sm bg-white rounded-2xl overflow-hidden 
+              shadow-md hover:shadow-xl 
+              transition duration-300 
+              hover:-translate-y-2">
+
+                        <div class="overflow-hidden">
+                            <img src="/img/Screenshot 2026-01-28 090249.png"
+                                class="hover:scale-110 transition duration-500">
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold mb-2">Poster Triogonometri</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Poster simple dengan desain yang tidak memakan banyak warna
+                            </p>
+
+                            <button class="bg-black text-white px-4 py-2 rounded-lg 
+                     hover:bg-gray-800 transition">
+                                View Project
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="max-w-sm bg-white rounded-2xl overflow-hidden 
+              shadow-md hover:shadow-xl 
+              transition duration-300 
+              hover:-translate-y-2">
+
+                        <div class="overflow-hidden">
+                            <img src="/img/Screenshot 2026-01-29 115159.png"
+                                class="hover:scale-110 transition duration-500">
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold mb-2">UI/UX Website Film</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Desain UI/UX website Film yang membuat tampilan menjadi lebih indah.
+                            </p>
+
+                            <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"><a
+                                    href="https://www.figma.com/design/srCT5Hyzh5CB5bj5le9MJe/Untitled?node-id=0-1&t=nnQIQpTWkXrOGTiV-1">View
+                                    Project</a></button>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="bg-white px-4 py-2 w-40 rounded-lg hover:bg-gray-200 transition hover:scale-110 transition duration-100"><a
+                            href="/project.html">View all project</a></button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="px-6 pb-10">
+            <div class="bg-[#FFFDD0] rounded-lg p-6">
+                <h3 class="font-bold mb-6 text-lg">Contact</h3>
+
+                <div class=" grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <p
+                        class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[20ch]">
+                        <i class="fa-brands fa-instagram text-pink-500 mr-2"></i>avizz_27
+                    </p>
+                    <p
+                        class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[25ch]max-w-full">
+                        <i class="fa-solid fa-envelope text-red-500 mr-2"></i>hhafizh662@gmail.com
+                    </p>
+                    <p
+                        class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[20ch]">
+                        <i class="fa-brands fa-whatsapp text-green-500 mr-2"></i>0812-9557-6091
+                    </p>
+                    <p
+                        class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[20ch]">
+                        <i class="fa-brands fa-github mr-2"></i>Hafizh aja
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-xs text-white py-6">
+            © 2026/03/03 Hafizh_ajjah. All Rights Reserved.
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
