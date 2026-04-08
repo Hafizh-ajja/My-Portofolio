@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -48,26 +48,51 @@
             animation: float 3s ease-in-out infinite;
         }
     </style>
+
+
 </head>
+
 
 <body class="bg-[#C4A484]">
 
     <!-- Navbar -->
-    <nav class="bg-[#FFFDD0] fixed w-full top-0 left-0 z-50 shadow-md">
-        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-            <h1 class="text-xl md:text-2xl italic font-semibold">Hafizh</h1>
+    <nav class="bg-[#FFF9C4] px-6 py-4 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
 
-            <!-- Menu Desktop -->
-            <ul class="hidden md:flex gap-6 text-sm">
-                <li><a href="#home" class="hover:scale-110 hover:text-black transition">Home</a></li>
-                <li><a href="#About" class="hover:scale-110 hover:text-black transition">About</a></li>
-                <li><a href="#Skills" class="hover:scale-110 hover:text-black transition">Skills</a></li>
-                <li><a href="#Project" class="hover:scale-110 hover:text-black transition">Project</a></li>
-                <li><a href="#Contact" class="hover:scale-110 hover:text-black transition">Contact</a></li>
-            </ul>
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-gray-900">Hafizh</div>
+
+            <!-- Desktop Menu (muncul di laptop/tablet ke atas) -->
+            <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+                <!-- <h1 class="text-xl md:text-2xl italic font-semibold">Hafizh</h1> -->
+
+                <ul class="hidden md:flex gap-6 text-sm">
+                    <li><a href="#home" class="hover:scale-110 hover:text-black transition">Home</a></li>
+                    <li><a href="#About" class="hover:scale-110 hover:text-black transition">About</a></li>
+                    <li><a href="#Skills" class="hover:scale-110 hover:text-black transition">Skills</a></li>
+                    <li><a href="#Project" class="hover:scale-110 hover:text-black transition">Project</a></li>
+                    <li><a href="#Contact" class="hover:scale-110 hover:text-black transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Button (hanya muncul di HP) -->
+            <button id="hamburger" class="md:hidden text-3xl text-gray-800 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (dropdown di bawah navbar) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FFF9C4] py-6 px-6 border-t border-yellow-200 mt-2">
+            <div class="flex flex-col gap-6 text-lg font-medium text-gray-800">
+                <a href="#home" class="hover:scale-110 hover:text-black transition">Home</a>
+                <a href="#About" class="hover:scale-110 hover:text-black transition">About</a>
+                <a href="#Skills" class="hover:scale-110 hover:text-black transition">Skills</a>
+                <a href="#Project" class="hover:scale-110 hover:text-black transition">Project</a>
+                <a href="#Contact" class="hover:scale-110 hover:text-black transition">Contact</a>
+            </div>
         </div>
     </nav>
-
+    
     <div class="pt-28 max-w-6xl mx-auto">
 
         <!-- Hero -->
@@ -140,9 +165,9 @@
         </section>
 
         <!-- Skills -->
-        <section class="px-6 pb-10" id="Skills">
+        <section class="px-6 pb-10" >
             <div class="bg-[#FFFDD0] rounded-lg p-6 text-center">
-                <h3 class="font-bold mb-6 text-lg">Skills</h3>
+                <h3 id="Skills" class="font-bold mb-6 text-lg">Skills</h3>
 
                 <div class="flex justify-center gap-8 text-5xl md:text-7xl">
                     <i class="fa-brands fa-figma float" style="animation-delay:0s"></i>
@@ -158,9 +183,9 @@
         </section>
 
         <!-- Projects -->
-        <section class="px-6 pb-10" id="Project">
+        <section class="px-6 pb-10" >
             <div class="bg-[#FFFDD0] rounded-lg p-6">
-                <h3 class="font-bold mb-6 text-lg">My Projects</h3>
+                <h3 class="font-bold mb-6 text-lg" id="Project">My Projects </h3>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
@@ -260,28 +285,34 @@
                 <div class=" grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                     <p
                         class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[20ch]">
-                        <a href="https://www.instagram.com/_avizz_27/" target="_blank"><i class="fa-brands fa-instagram text-pink-500 mr-2"></i> avizz_27</a>
+                        <a href="https://www.instagram.com/_avizz_27/" target="_blank"><i
+                                class="fa-brands fa-instagram text-pink-500 mr-2"></i> avizz_27</a>
                     </p>
                     <p
                         class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[20ch]">
-                        <a href="https://www.linkedin.com/in/hafizh-09ab5937a/?skipRedirect=true" target="_blank"><i class="fa-brands fa-linkedin" style="color: rgb(116, 192, 252);"></i> Hafizh-ajja</a>
+                        <a href="https://www.linkedin.com/in/hafizh-09ab5937a/?skipRedirect=true" target="_blank"><i
+                                class="fa-brands fa-linkedin" style="color: rgb(116, 192, 252);"></i> Hafizh-ajja</a>
                     </p>
                     <p
                         class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[25ch]max-w-full">
-                        <a href="mailto:hhafizh662@gmail.com" target="_blank"><i class="fa-solid fa-envelope text-red-500 mr-2"></i> hhafizh662@gmail.com</a>
+                        <a href="mailto:hhafizh662@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope text-red-500 mr-2"></i> hhafizh662@gmail.com</a>
                     </p>
                     <p
                         class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[25ch]max-w-full">
-                        <a href="https://x.com/justcallmepiss_" target="_blank"><i class="fa-brands fa-twitter" style="color: rgb(116, 192, 252);"></i> justcallmepiss_</a>
+                        <a href="https://x.com/justcallmepiss_" target="_blank"><i class="fa-brands fa-twitter"
+                                style="color: rgb(116, 192, 252);"></i> justcallmepiss_</a>
                     </p>
-                    
+
                     <p
                         class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[20ch]">
-                        <a href="https://wa.me/6281356561035" target="_blank"><i class="fa-brands fa-whatsapp text-green-500 mr-2"></i> 0812-9557-6091</a>
+                        <a href="https://wa.me/6281356561035" target="_blank"><i
+                                class="fa-brands fa-whatsapp text-green-500 mr-2"></i> 0812-9557-6091</a>
                     </p>
                     <p
                         class="typing text-black text-lg font-mono whitespace-nowrap overflow-hidden border-r-2 border-black w-[20ch]">
-                        <a href="https://github.com/Hafizh-ajja" target="_blank"><i class="fa-brands fa-github mr-2"></i> Hafizh aja</a>
+                        <a href="https://github.com/Hafizh-ajja" target="_blank"><i
+                                class="fa-brands fa-github mr-2"></i> Hafizh aja</a>
                     </p>
                 </div>
             </div>
@@ -293,6 +324,22 @@
         </footer>
 
     </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+
+            // Ubah ikon jadi X saat terbuka
+            if (mobileMenu.classList.contains('hidden')) {
+                hamburger.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+            } else {
+                hamburger.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+            }
+        });
+    </script>
 
 </body>
 
